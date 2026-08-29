@@ -24,7 +24,7 @@ const ENRICHMENT = {
   gyukaku:{ratings:[{source:"食べログ",score:"3.04",count:36,url:"https://tabelog.com/kanagawa/A1401/A140204/14029537/"}],menuUrl:"https://www.gyukaku.ne.jp/menu/",photoUrl:"https://canlyhp.s3.ap-northeast-1.amazonaws.com/images/reins/gyukaku_ogp.png",photoLabel:"牛角公式",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14029537/dtlphotolst/"},
   king:{ratings:[{source:"食べログ",score:"3.03",count:30,url:"https://tabelog.com/kanagawa/A1401/A140204/14093922/"}],menuUrl:"https://www.yakiniku-king.jp/menu_all/",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14093922/dtlphotolst/"},
   mingei:{ratings:[{source:"食べログ",score:"3.07",count:30,url:"https://tabelog.com/kanagawa/A1401/A140204/14098970/"}],menuUrl:"https://www.sagami-holdings.co.jp/menu/mingei/",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14098970/dtlphotolst/"},
-  sugidama:{ratings:[{source:"食べログ",score:"3.36",count:154,url:"https://tabelog.com/kanagawa/A1401/A140204/14075037/"}],menuUrl:"https://www.sugidama-sushiizakaya.jp/menu/",photoUrl:"https://page-share.line.me//%40466qnynt/global/og_image.png",photoLabel:"店舗公式",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14075037/dtlphotolst/"},
+  sugidama:{ratings:[{source:"食べログ",score:"3.36",count:154,url:"https://tabelog.com/kanagawa/A1401/A140204/14075037/"}],menuUrl:"https://www.sugidama-sushiizakaya.jp/menu/",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14075037/dtlphotolst/"},
   maguro:{ratings:[{source:"食べログ",score:"3.13",count:15,url:"https://tabelog.com/kanagawa/A1401/A140204/14074056/"}],menuUrl:"https://maguro-tunashima.com/",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14074056/dtlphotolst/"},
   ippudo:{ratings:[{source:"食べログ",score:"3.26",count:76,url:"https://tabelog.com/kanagawa/A1401/A140204/14093186/"}],menuUrl:"https://www.ippudo.com/menu/",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14093186/dtlphotolst/"},
   itariya:{ratings:[{source:"食べログ",score:"3.26",count:95,url:"https://tabelog.com/kanagawa/A1401/A140204/14014308/"}],photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14014308/dtlphotolst/",menuUrl:"https://tabelog.com/kanagawa/A1401/A140204/14014308/dtlmenu/"},
@@ -33,3 +33,4 @@ const ENRICHMENT = {
 };
 
 RESTAURANTS.forEach(r=>Object.assign(r,{ratings:[],menuUrl:null,photosUrl:null,photoUrl:null,photoLabel:null},ENRICHMENT[r.id]||{}));
+window.RESTAURANTS = window.RESTAURANTS.filter(r=>r.id!=="donmaru");
