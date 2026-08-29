@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260829-5">
-  <link rel="stylesheet" href="enrichment.css?v=20260829-5">
+  <link rel="stylesheet" href="styles.css?v=20260829-7">
+  <link rel="stylesheet" href="enrichment.css?v=20260829-7">
 </head>
 <body>
   <header class="topbar">
@@ -45,6 +45,12 @@
       </div>
     </section>
 
+    <section class="limited-section" id="limitedSection">
+      <div class="results-heading"><div><p class="eyebrow">AVAILABLE NOW</p><h2>今だけのメニュー</h2></div><a class="limited-all" href="#resultsSection">店舗から探す ↓</a></div>
+      <p class="limited-note">公式発表から、指定日時に販売期間内の商品を表示します。店舗在庫・取扱いは店頭で最終確認してください。</p>
+      <div class="limited-list" id="limitedMenus"></div>
+    </section>
+
     <section class="results-section" id="resultsSection">
       <div class="results-heading">
         <div><p class="eyebrow">TONIGHT'S SHORTLIST</p><h2><span id="resultCount">0</span>軒に絞りました</h2></div>
@@ -68,7 +74,7 @@
   <footer><div class="brand"><span class="brand-mark">今</span><span>今夜、どこ食べる？</span></div><p>綱島から育てる、食の横断検索。</p><p class="footer-small">掲載情報は変更される場合があります。来店前に公式情報をご確認ください。</p></footer>
 
   <dialog id="detailDialog" class="detail-dialog"><button class="dialog-close" data-close aria-label="閉じる">×</button><div id="detailContent"></div></dialog>
-  <dialog id="infoDialog" class="info-dialog"><button class="dialog-close" data-close aria-label="閉じる">×</button><p class="eyebrow">DATA POLICY</p><h2>このサイトの情報表示</h2><div class="info-list"><p><b>確認済み</b> 公式店舗ページまたは運営会社で確認した情報です。</p><p><b>媒体リンク</b> 各媒体内の検索結果を開きます。掲載や評価点を保証する表示ではありません。</p><p><b>営業可能性</b> 通常営業時間とラストオーダーから機械判定します。臨時休業・満席は反映されない場合があります。</p><p><b>未確認</b> 情報が存在しないという意味ではなく、このサイトでまだ確認していない項目です。</p></div><button class="primary-button wide" data-close>わかりました</button></dialog>
-  <script src="data.js?v=20260829-6"></script><script src="app.js?v=20260829-6"></script>
+  <dialog id="infoDialog" class="info-dialog"><button class="dialog-close" data-close aria-label="閉じる">×</button><p class="eyebrow">DATA POLICY</p><h2>このサイトの情報表示</h2><div class="info-list"><p><b>確認済み</b> 公式店舗ページまたは運営会社で確認した情報です。</p><p><b>期間限定</b> 公式発表の販売期間から表示します。「全国販売」でも店舗在庫・一部店舗除外は店頭確認が必要です。</p><p><b>媒体リンク</b> 各媒体内の検索結果を開きます。掲載や評価点を保証する表示ではありません。</p><p><b>営業可能性</b> 通常営業時間とラストオーダーから機械判定します。臨時休業・満席は反映されない場合があります。</p><p><b>未確認</b> 情報が存在しないという意味ではなく、このサイトでまだ確認していない項目です。</p></div><button class="primary-button wide" data-close>わかりました</button></dialog>
+  <script src="data.js?v=20260829-7"></script><script src="app.js?v=20260829-7"></script>
 </body>
 </html>
