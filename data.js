@@ -18,6 +18,11 @@ RESTAURANTS.push(
   {id:"doutor",name:"ドトール珈琲店 綱島西口店",reading:"どとーるこーひーてん",genres:["カフェ","洋食"],area:"west",areaLabel:"綱島西",walk:4,budget:1200,summary:"ハンドドリップの珈琲に、食事やスイーツも揃う広めのカフェ。",address:"横浜市港北区綱島西2-7-29",hours:{0:[[480,1230]],1:[[480,1230]],2:[[480,1230]],3:[[480,1230]],4:[[480,1230]],5:[[480,1230]],6:[[480,1230]]},lastOrder:null,reserve:false,takeout:true,delivery:false,official:"https://tsunashima.com/shoplist/?g=gourmet&n=5",checked:"2026-08-29",sourceLabel:"綱島商店街公式",confidence:"medium",features:["カフェ","朝8時","一人向き"],media:["Google","食べログ"]}
 );
 
+RESTAURANTS.push(
+  {id:"piualto",name:"piu alto",reading:"ぴゅあると",genres:["イタリアン","パスタ"],area:"west",areaLabel:"綱島駅西口",walk:4,budget:6000,summary:"行則翔太氏が、イタリア料理18年の経験を綱島で形にする14席のイタリアン。日曜と隔週月曜が休み。",address:"横浜市港北区綱島西1-10-11 酒のタケオビル4F",hours:{0:[],1:[[690,870],[1050,1320]],2:[[690,870],[1050,1320]],3:[[690,870],[1050,1320]],4:[[690,870],[1050,1320]],5:[[690,870],[1050,1320]],6:[[690,870],[1050,1320]]},lastOrder:null,reserve:true,takeout:false,delivery:false,official:"https://hitosara.com/0020004283/",checked:"2026-08-29",sourceLabel:"ヒトサラ店舗・料理人ページ",confidence:"medium",features:["料理人紹介","14席","隔週月曜休み"],media:["Google","食べログ","ヒトサラ","Instagram"]},
+  {id:"sushitatsu",name:"鮨辰",reading:"すしたつ",genres:["寿司","海鮮"],area:"west",areaLabel:"綱島西",walk:15,budget:4000,summary:"鮨職人歴51年の瀬川勇雄氏が握る地域の鮨店。昼夜営業、持ち帰りにも対応。",address:"横浜市港北区綱島西5-16-19",hours:{0:[[690,840],[1050,1260]],1:[],2:[[690,840],[1050,1260]],3:[[690,840],[1050,1260]],4:[[690,840],[1050,1260]],5:[[690,840],[1050,1260]],6:[[690,840],[1050,1260]]},lastOrder:null,reserve:true,takeout:true,delivery:false,official:"https://hitosara.com/0002017754/",checked:"2026-08-29",sourceLabel:"ヒトサラ店舗・料理人ページ",confidence:"medium",features:["料理人紹介","職人歴51年","月曜定休"],media:["Google","食べログ","ヒトサラ"]}
+);
+
 const ENRICHMENT = {
   machida:{ratings:[{source:"食べログ",score:"3.43",count:249,url:"https://tabelog.com/kanagawa/A1401/A140204/14044331/"}],menuUrl:"https://shop.machidashoten.com/japan/detail/111008/",photoUrl:"https://meocloud-image.can-ly.com/images/cms/managed/companies/996/2024052920523220230315165142MAX%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%281%29.jpg",photoLabel:"MAXラーメン（公式）",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14044331/dtlphotolst/"},
   gyukaku:{ratings:[{source:"食べログ",score:"3.04",count:36,url:"https://tabelog.com/kanagawa/A1401/A140204/14029537/"}],menuUrl:"https://www.gyukaku.ne.jp/menu/",photoUrl:"https://canlyhp.s3.ap-northeast-1.amazonaws.com/images/reins/gyukaku_ogp.png",photoLabel:"牛角公式",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14029537/dtlphotolst/"},
@@ -30,7 +35,9 @@ const ENRICHMENT = {
   itariya:{ratings:[{source:"食べログ",score:"3.26",count:95,url:"https://tabelog.com/kanagawa/A1401/A140204/14014308/"}],photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14014308/dtlphotolst/",menuUrl:"https://tabelog.com/kanagawa/A1401/A140204/14014308/dtlmenu/"},
   kagono:{ratings:[{source:"食べログ",score:"3.06",count:60,url:"https://tabelog.com/kanagawa/A1401/A140204/14055572/"}],menuUrl:"https://kagonoya.food-kr.com/menu",photosUrl:"https://tabelog.com/kanagawa/A1401/A140204/14055572/dtlphotolst/"},
   ishida:{ratings:[{source:"食べログ",score:"3.04",count:33,url:"https://tabelog.com/kanagawa/A1401/A140204/14054537/"}],menuUrl:"https://ishidashotentsunashima.owst.jp/foods",photoUrl:"https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/dofv5uzc/75839447/tl0b_w500h500.jpg",photoLabel:"炭火焼鳥盛り合わせ（店舗公式）",photosUrl:"https://ishidashotentsunashima.owst.jp/gallery"},
-  doutor:{hitosaraUrl:"https://hitosara.com/0031663385/"}
+  doutor:{hitosaraUrl:"https://hitosara.com/0031663385/"},
+  piualto:{hitosaraUrl:"https://hitosara.com/0020004283/",chefUrl:"https://hitosara.com/0020004283/person.html",chefName:"行則 翔太氏",chefSpecialty:"イタリア料理・経験18年"},
+  sushitatsu:{hitosaraUrl:"https://hitosara.com/0002017754/",chefUrl:"https://hitosara.com/0002017754/person.html",chefName:"瀬川 勇雄氏",chefSpecialty:"寿司・経験51年"}
 };
 
-RESTAURANTS.forEach(r=>Object.assign(r,{ratings:[],menuUrl:null,photosUrl:null,photoUrl:null,photoLabel:null,hitosaraUrl:null},ENRICHMENT[r.id]||{}));
+RESTAURANTS.forEach(r=>Object.assign(r,{ratings:[],menuUrl:null,photosUrl:null,photoUrl:null,photoLabel:null,hitosaraUrl:null,chefUrl:null,chefName:null,chefSpecialty:null},ENRICHMENT[r.id]||{}));
